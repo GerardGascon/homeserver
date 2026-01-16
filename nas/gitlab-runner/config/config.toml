@@ -1,0 +1,18 @@
+concurrent = 5
+log_level = "warning"
+
+[[runners]]
+    name = "gitlab-runner"
+    url = "https://git.gerardgascon.com"
+    executor = "docker"
+    token = ""
+    limit = 0
+    request_concurrency = 3
+    [runners.docker]
+        tls_verify = false
+        image = "docker:latest"
+        privileged = true
+        disable_cache = false
+        volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+    [runners.cache]
+        Insecure = false
