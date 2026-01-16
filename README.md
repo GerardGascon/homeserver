@@ -11,7 +11,8 @@ This is my home server setup (I also consider my VPS part of my home server).
 | TrueNAS home server             |
 |---------------------------------|
 | TrueNAS Scale Community Edition |
-| 256 GB NVMe (OS)                |
+| 64GB RAM                        |
+| 256GB NVMe (OS)                 |
 | 1 TB NVMe                       |
 | Ryzen 5 5500                    |
 | RTX 3050 (8GB)                  |
@@ -29,7 +30,8 @@ services: {}
 | Raspberry Pi CM5 |
 |------------------|
 | Raspberry Pi OS  |
-| 32 GB eMMC       |
+| 4GB RAM          |
+| 32GB eMMC        |
 
 This Pi mainly acts as a backup. But it also gives me the ability to remotely use Wake-on-LAN to power up my NAS.
 
