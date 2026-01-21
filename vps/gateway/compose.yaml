@@ -1,0 +1,29 @@
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    ports:
+      - "51820:51820/udp"
+      - "80:80"
+      - "443:443"
+    environment:
+      - TZ=${TZ:-Etc/UTC}
+      - LOG_CONFS=true
+    volumes:
+      - ./config:/config
+      - /lib/modules:/lib/modules #optional
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:latest
+    network_mode: service:wireguard
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - wireguard
+    restart: unless-stopped

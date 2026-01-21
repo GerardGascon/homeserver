@@ -37,13 +37,12 @@ This Pi mainly acts as a backup. But it also gives me the ability to remotely us
 
 ### VPS
 
+| AWS Lightsail |
+|---------------|
+| Ubuntu Server |
+| 2 vCPUs       |
+| 512MB RAM     |
+| 20 GB         |
 
-| DigitalOcean Droplet |
-|----------------------|
-| Ubuntu Server        |
-| 1 vCPU               |
-| 512MB RAM            |
-| 10 GiB               |
-
-This VPS mainly acts as a gateway to my home server. It has Nginx Proxy Manager and WireGuard to create a tunnel to my
-services without using Port Forwarding.
+This VPS mainly acts as a gateway to my home server. It has Nginx and WireGuard to create a tunnel to my services
+without using Port Forwarding.
