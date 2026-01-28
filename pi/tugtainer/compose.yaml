@@ -1,0 +1,18 @@
+services:
+  agent:
+    image: ghcr.io/quenary/tugtainer-agent:1
+    container_name: tugtainer-agent
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    env_file:
+      - .env
+    environment:
+      - AGENT_SECRET=${AGENT_SECRET}
+    read_only: true
+    tmpfs:
+      - /run
+    ports:
+      - '9413:8001'
+    labels:
+      dev.quenary.tugtainer.protected: True
+    restart: unless-stopped

@@ -4,6 +4,8 @@ networks:
     ipam:
       config:
         - subnet: 172.39.0.0/24
+  nginx-proxy-manager:
+    external: true
 
 services:
   gluetun:
@@ -60,7 +62,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 20s
-
+  
   deunhealth:
     image: qmcgaw/deunhealth
     container_name: deunhealth
@@ -107,7 +109,7 @@ services:
         condition: service_healthy
         restart: true
     network_mode: service:gluetun
-
+  
   jackett:
     image: lscr.io/linuxserver/jackett:latest
     container_name: jackett
@@ -131,38 +133,36 @@ services:
     container_name: sonarr
     restart: unless-stopped
     environment:
-      - PUID=${PUID:-950}
-      - PGID=${PGID:-950}
+      - PUID=3000
+      - PGID=3000
       - TZ=${TZ:-Etc/UTC}
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./sonarr:/config
       - /mnt/NVMe/media:/data
       - /mnt/NVMe/downloads:/data/downloads
-    ports:
-      - 8989:8989
     networks:
       arr-network:
         ipv4_address: 172.39.0.3
+      nginx-proxy-manager: {}
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
     restart: unless-stopped
     environment:
-      - PUID=${PUID:-3000}
-      - PGID=${PGID:-3000}
+      - PUID=3000
+      - PGID=3000
       - TZ=${TZ:-Etc/UTC}
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./radarr:/config
       - /mnt/NVMe/media:/data
       - /mnt/NVMe/downloads:/data/downloads
-    ports:
-      - 7878:7878
     networks:
       arr-network:
         ipv4_address: 172.39.0.4
+      nginx-proxy-manager: {}
 
   lidarr:
     container_name: lidarr
@@ -177,11 +177,10 @@ services:
       - PUID=${PUID:-950}
       - PGID=${PGID:-950}
       - TZ=${TZ:-Etc/UTC}
-    ports:
-      - 8686:8686
     networks:
       arr-network:
         ipv4_address: 172.39.0.5
+      nginx-proxy-manager: {}
 
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
@@ -196,11 +195,10 @@ services:
       - ./bazarr:/config
       - /mnt/NVMe/media:/data
       - /mnt/NVMe/downloads:/data/downloads
-    ports:
-      - 6767:6767
     networks:
       arr-network:
         ipv4_address: 172.39.0.6
+      nginx-proxy-manager: {}
 
   jellyseerr:
     container_name: jellyseerr
@@ -211,9 +209,8 @@ services:
       - TZ=${TZ:-Etc/UTC}
     volumes:
       - ./jellyseerr:/app/config
-    ports:
-      - 5055:5055
     networks:
       arr-network:
         ipv4_address: 172.39.0.9
+      nginx-proxy-manager: {}
     restart: unless-stopped

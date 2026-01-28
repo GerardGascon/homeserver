@@ -112,7 +112,7 @@ pages:
               torreta-del-drac-server:
                 name: Torreta del Drac Server
                 url: https://torreta.home.gerardgascon.com/admin
-                icon: si:redragon
+                icon: si:redragon 
                 hide: false
               linkwarden:
                 name: Linkwarden
@@ -148,6 +148,30 @@ pages:
                 description: Productivity Platform
                 url: https://nextcloud.home.gerardgascon.com
                 icon: si:nextcloud
+                hide: false
+              openspeedtest:
+                name: Speedtest
+                description: Test Connection to NAS
+                url: https://openspeedtest.home.gerardgascon.com
+                icon: si:speedtest
+                hide: false
+              beszel:
+                name: Beszel
+                description: System Monitoring
+                url: https://beszel.home.gerardgascon.com
+                icon: si:uptimekuma
+                hide: false
+              stirling-pdf:
+                name: Stirling PDF
+                description: PDF Editor
+                url: https://pdf.home.gerardgascon.com
+                icon: si:ilovepdf
+                hide: false
+              tugtainer:
+                name: Tugtainer
+                description: Docker Updater
+                url: https://tugtainer.home.gerardgascon.com
+                icon: si:watchtower
                 hide: false
 
           - type: docker-containers

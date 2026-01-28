@@ -1,0 +1,16 @@
+networks:
+  nginx-proxy-manager:
+    external: true
+
+services:
+  tugtainer:
+    container_name: tugtainer
+    image: ghcr.io/quenary/tugtainer:1
+    volumes:
+      - ./data:/tugtainer
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - nginx-proxy-manager
+    labels:
+      dev.quenary.tugtainer.protected: True
+    restart: unless-stopped
