@@ -1,9 +1,3 @@
-[submodule "nas/rss-reader"]
-	path = nas/rss-reader
-	url = http://git.gerardgascon.com/Geri/rss-reader.git
-[submodule "nas/torreta-del-drac-server"]
-	path = nas/torreta-del-drac-server
-	url = http://git.gerardgascon.com/Geri/torreta-del-drac-server.git
 [submodule "pi/docker-deploy-notifier"]
 	path = pi/docker-deploy-notifier
 	url = http://git.gerardgascon.com/Geri/docker-deploy-notifier.git
