@@ -7,3 +7,6 @@
 [submodule "nas"]
 	path = nas
 	url = https://git.gerardgascon.com/Geri/homeserver-nas.git
+[submodule "vps"]
+	path = vps
+	url = https://git.gerardgascon.com/Geri/homeserver-vps.git
