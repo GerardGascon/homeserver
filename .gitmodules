@@ -4,3 +4,6 @@
 [submodule "vps"]
 	path = vps
 	url = https://git.gerardgascon.com/Geri/homeserver-vps.git
+[submodule "pi"]
+	path = pi
+	url = https://git.gerardgascon.com/Geri/homeserver-raspi.git
