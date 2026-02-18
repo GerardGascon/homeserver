@@ -1,9 +1,3 @@
-[submodule "pi/docker-deploy-notifier"]
-	path = pi/docker-deploy-notifier
-	url = http://git.gerardgascon.com/Geri/docker-deploy-notifier.git
-[submodule "vps/game-of-the-day-trigger"]
-	path = vps/game-of-the-day-trigger
-	url = https://github.com/GerardGascon/game-of-the-day-trigger
 [submodule "nas"]
 	path = nas
 	url = https://git.gerardgascon.com/Geri/homeserver-nas.git
