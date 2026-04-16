@@ -14,6 +14,7 @@ This is my home server setup (I also consider my VPS part of my home server).
 | 64GB RAM                        |
 | 256GB NVMe (OS)                 |
 | 1 TB NVMe                       |
+| 4x 512 GB HDD (stripped mirror) |
 | Ryzen 5 5500                    |
 | RTX 3050 (8GB)                  |
 
