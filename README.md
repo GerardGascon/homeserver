@@ -1,12 +1,16 @@
 # Home Server
 
-This is my home server setup (I also consider my VPS part of my home server).
+This is my home server setup. 
+
+I also consider a VPS part of my home server as it serves an essential role for remote access.
 
 ---
 
-## Elements
+## Servers
 
-### NAS
+### Kamaji
+
+> The big server that does most of the tasks.
 
 | TrueNAS home server             |
 |---------------------------------|
@@ -26,7 +30,9 @@ include:
 services: {}
 ```
 
-### Raspberry Pi
+### Sakamoto
+
+> The tiny server that sits around doing almost nothing but it's useful when it needs to.
 
 | Raspberry Pi CM5 |
 |------------------|
@@ -36,7 +42,9 @@ services: {}
 
 This Pi mainly acts as a backup. But it also gives me the ability to remotely use Wake-on-LAN to power up my NAS.
 
-### VPS
+### Rosso
+
+> The server on the cloud that locates everyone else.
 
 | Hetzner CPX22 |
 |---------------|
