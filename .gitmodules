@@ -1,9 +1,9 @@
 [submodule "kamaji"]
 	path = kamaji
-	url = https://git.gerardgascon.com/Geri/homeserver-nas.git
+	url = https://git.gerardgascon.com/Geri/homeserver-kamaji.git
 [submodule "rosso"]
 	path = rosso
-	url = https://git.gerardgascon.com/Geri/homeserver-vps.git
+	url = https://git.gerardgascon.com/Geri/homeserver-rosso.git
 [submodule "sakamoto"]
 	path = sakamoto
-	url = https://git.gerardgascon.com/Geri/homeserver-raspi.git
+	url = https://git.gerardgascon.com/Geri/homeserver-sakamoto.git
