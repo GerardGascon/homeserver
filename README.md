@@ -19,6 +19,7 @@ I also consider a VPS part of my home server as it serves an essential role for 
 | 256GB NVMe (OS)                 |
 | 1 TB NVMe                       |
 | 4x 512 GB HDD (stripped mirror) |
+| 3x 6TB HDD (RAID-Z1)            |
 | Ryzen 5 5500                    |
 | RTX 3050 (8GB)                  |
 
